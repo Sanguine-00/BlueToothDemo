@@ -9,13 +9,36 @@
 
 
     <LinearLayout
+        android:id="@+id/ll_advertiser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_normal"
+        android:orientation="horizontal">
+
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_start_scan_advertiser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/start_scan_le_advertiser"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_stop_scan_advertiser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/stop_scan_le_advertiser"/>
+
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/ll_normal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/ll_le"
         android:layout_marginBottom="5dp"
-        android:orientation="horizontal"
-        android:padding="5dip">
+        android:orientation="horizontal">
 
 
         <android.support.v7.widget.AppCompatButton
@@ -40,8 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="5dp"
-        android:orientation="horizontal"
-        android:padding="5dip">
+        android:orientation="horizontal">
 
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/btn_start_scan_le"
@@ -61,6 +83,7 @@
     <android.support.v7.widget.ListViewCompat
         android:id="@+id/list_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_advertiser"
         />
 </RelativeLayout>
