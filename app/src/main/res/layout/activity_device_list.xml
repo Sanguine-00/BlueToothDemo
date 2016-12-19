@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.bluetoothdemo.activity.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/ll_bonded"
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+
+
+        <android.support.v7.widget.ListViewCompat
+            android:id="@+id/list_bonded"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/tv_already_bonded"
+            ></android.support.v7.widget.ListViewCompat>
+
+        <TextView
+            android:id="@+id/tv_already_bonded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="@string/already_bonded"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/ll_menus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_bonded">
+
+
+        <android.support.v7.widget.ListViewCompat
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:transcriptMode="alwaysScroll"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

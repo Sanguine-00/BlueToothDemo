@@ -6,4 +6,5 @@
     <string name="stop_scan_le">停止LE扫描</string>
     <string name="start_scan_le_advertiser">开始LE广播</string>
     <string name="stop_scan_le_advertiser">停止LE广播</string>
+    <string name="already_bonded">已经配对的设备:</string>
 </resources>

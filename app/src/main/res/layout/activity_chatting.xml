@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_chatting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.bluetoothdemo.chatroom.ChattingActivity">
+
+    <TextView
+        android:id="@+id/tv_choose_device"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:layout_above="@+id/listview_msg"
+        android:text="选择列表"/>
+
+    <ListView
+        android:id="@+id/listview_msg"
+        android:layout_width="match_parent"
+        android:transcriptMode="alwaysScroll"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_edit_area"></ListView>
+
+
+    <LinearLayout
+        android:id="@+id/ll_edit_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_msg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_send_msg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="发送"/>
+
+    </LinearLayout>
+</RelativeLayout>

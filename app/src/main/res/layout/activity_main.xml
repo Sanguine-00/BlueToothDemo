@@ -1,89 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.bluetoothdemo.activity.MainActivity">
 
+    <RelativeLayout
+        android:id="@+id/ll_bonded"
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
 
-    <LinearLayout
-        android:id="@+id/ll_advertiser"
+
+        <android.support.v7.widget.ListViewCompat
+            android:id="@+id/list_bonded"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/tv_already_bonded"
+            ></android.support.v7.widget.ListViewCompat>
+
+        <TextView
+            android:id="@+id/tv_already_bonded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="@string/already_bonded"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/ll_menus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/ll_normal"
-        android:orientation="horizontal">
+        android:layout_below="@id/ll_bonded">
 
-
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btn_start_scan_advertiser"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/ll_advertiser"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/start_scan_le_advertiser"/>
+            android:layout_above="@+id/ll_normal"
+            android:orientation="horizontal">
 
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btn_stop_scan_advertiser"
-            android:layout_width="wrap_content"
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_start_scan_advertiser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/start_scan_le_advertiser"/>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_stop_scan_advertiser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/stop_scan_le_advertiser"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_normal"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/stop_scan_le_advertiser"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/ll_normal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/ll_le"
-        android:layout_marginBottom="5dp"
-        android:orientation="horizontal">
+            android:layout_above="@+id/ll_le"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
 
 
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btn_start_scan"
-            android:layout_width="wrap_content"
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_start_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/start_scan"/>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_stop_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/stop_scan"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_le"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/start_scan"/>
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
 
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btn_stop_scan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/stop_scan"/>
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_start_scan_le"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/start_scan_le"/>
 
-    </LinearLayout>
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_stop_scan_le"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/stop_scan_le"/>
+        </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/ll_le"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="5dp"
-        android:orientation="horizontal">
+        <android.support.v7.widget.ListViewCompat
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_advertiser"
+            />
 
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btn_start_scan_le"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/start_scan_le"/>
+    </RelativeLayout>
 
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btn_stop_scan_le"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/stop_scan_le"/>
-    </LinearLayout>
-
-    <android.support.v7.widget.ListViewCompat
-        android:id="@+id/list_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/ll_advertiser"
-        />
-</RelativeLayout>
+</LinearLayout>
