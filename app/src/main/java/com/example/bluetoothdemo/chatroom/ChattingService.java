@@ -295,6 +295,10 @@ public class ChattingService {
                 return;
             }
 
+            synchronized (this) {
+                mConnectThread = null;
+            }
+
             // 连接成功
             connected(mmSocket, mmDevice, null);
         }
